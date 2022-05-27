@@ -79,7 +79,8 @@ namespace jwtWebApiTutorial.Controllers
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.UserName)
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Role, "Admin")
             };
 
             var Key = new SymmetricSecurityKey(
